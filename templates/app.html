@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Sucess</h1>
+    <h1>{{titulo}}</h1>
+    <h2>{{tituloPagina}}</h2>
+    <table>
+        <tr>
+            <td>Usuario</td>
+            <td>Senha</td>
+            <td>Ação</td>
+        </tr>
+        <tr>
+            <form action="{{ url_for('login') }}"  method="post" >
+                <td><input type="text" name="email" placeholder="coloque seu email"></td>
+                <td><input type="password" name="password"></td>
+                <td><input type="submit" value="logar"></td>
+            </form>
+        </tr>
+    </table>
 </body>
+
 </html>
